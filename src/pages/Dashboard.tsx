@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { invoke, isTauri } from "@tauri-apps/api/core";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import "./Dashboard.css";
 
 /** Milliseconds until the next Monday 07:00 UTC, when Rust next treats a sync as due. */
@@ -130,7 +131,16 @@ function Dashboard({ filter }: DashboardProps) {
       )}
       <ul className="course-list" aria-labelledby="courses-heading">
         {visibleCourses.map((course, index) => (
-          <li key={`${index}-${course}`}>{course}</li>
+          <li key={`${index}-${course}`}>
+            <Card className="h-full">
+              <CardContent>
+                <div className="aspect-video rounded-lg bg-blue-500" />
+              </CardContent>
+              <CardHeader>
+                <CardTitle>{course}</CardTitle>
+              </CardHeader>
+            </Card>
+          </li>
         ))}
       </ul>
     </main>
