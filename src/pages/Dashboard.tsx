@@ -129,7 +129,10 @@ function Dashboard({ filter }: DashboardProps) {
           )}
         </div>
       )}
-      <ul className="course-list" aria-labelledby="courses-heading">
+      <ul
+        className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(14rem,1fr))] gap-4"
+        aria-labelledby="courses-heading"
+      >
         {visibleCourses.map((course, index) => (
           <li key={`${index}-${course}`}>
             <Card className="h-full">

@@ -30,13 +30,6 @@
   overflow-wrap: anywhere;
 }
 
-.course-list {
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-  gap: 1rem;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
